@@ -7,11 +7,21 @@
   <script>
     (function() {
       var path = window.location.pathname || '/';
-      if (path.startsWith('/site/www.uohkca.com/')) {
-        window.location.replace('/site/www.uohkca.com/');
+      var segments = path.split('/').filter(Boolean);
+      var base = '';
+
+      if (window.location.hostname.endsWith('github.io') && segments[0] && segments[0] !== 'site') {
+        base = '/' + segments[0];
+      }
+
+      var siteRoot = base + '/site/www.uohkca.com/';
+      if (path.startsWith(siteRoot)) {
+        window.location.replace(siteRoot);
         return;
       }
-      var target = '/site/www.uohkca.com' + path + window.location.search + window.location.hash;
+
+      var route = base && path.startsWith(base + '/') ? path.slice(base.length) : path;
+      var target = siteRoot.slice(0, -1) + route + window.location.search + window.location.hash;
       window.location.replace(target);
     })();
   </script>
