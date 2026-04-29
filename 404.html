@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting...</title>
+  <script>
+    (function() {
+      var path = window.location.pathname || '/';
+      if (path.startsWith('/site/www.uohkca.com/')) {
+        window.location.replace('/site/www.uohkca.com/');
+        return;
+      }
+      var target = '/site/www.uohkca.com' + path + window.location.search + window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body></body>
+</html>

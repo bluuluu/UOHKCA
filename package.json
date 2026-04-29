@@ -1,0 +1,24 @@
+{
+  "name": "uohkca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mirror": "node mirror.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluuluu/UOHKCA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluuluu/UOHKCA/issues"
+  },
+  "homepage": "https://github.com/bluuluu/UOHKCA#readme",
+  "dependencies": {
+    "website-scraper": "^6.0.0"
+  }
+}
